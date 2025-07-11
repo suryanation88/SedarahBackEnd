@@ -1,0 +1,1195 @@
+{
+	"info": {
+		"_postman_id": "f75ad5c4-16c7-4a4e-ba76-300a5d5fa197",
+		"name": "db_backendDonor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39959320"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "GET /api/v1/users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/v1/users/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/users/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Surya",
+									"type": "text"
+								},
+								{
+									"key": "domisili",
+									"value": "Denpasar",
+									"type": "text"
+								},
+								{
+									"key": "golongan_darah",
+									"value": "O+",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "08111111111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /api/v1/users/update/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Surya",
+									"type": "text"
+								},
+								{
+									"key": "domisili",
+									"value": "Padang Sambian",
+									"type": "text"
+								},
+								{
+									"key": "golongan_darah",
+									"value": "O+",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "081111111111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/update/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/v1/users/delete/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/delete/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "permohonan",
+			"item": [
+				{
+					"name": "GET /api/v1/permohonan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/v1/permohonan/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/permohonan/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_pasien",
+									"value": "Agus",
+									"type": "text"
+								},
+								{
+									"key": "kabupaten",
+									"value": "Badung",
+									"type": "text"
+								},
+								{
+									"key": "rumah_sakit",
+									"value": "RSUD Kapal",
+									"type": "text"
+								},
+								{
+									"key": "golongan_darah",
+									"value": "O",
+									"type": "text"
+								},
+								{
+									"key": "rhesus",
+									"value": "-",
+									"type": "text"
+								},
+								{
+									"key": "jml_pendonor",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "nama_pemohon",
+									"value": "Dani",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "08134523456",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Belum Selesai",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_kebutuhan",
+									"value": "10/7/2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/permohonan/update/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTc2ODc0NSwianRpIjoiZTM2YjJiNWItYjljOC00ODE1LTg5OTctMTk0YzY0MjczMzRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InsndXNlcm5hbWUnOiAnc3VyeWEnLCAndXNlcl9pZCc6IDF9IiwibmJmIjoxNzUxNzY4NzQ1LCJjc3JmIjoiOWIyZjFjMDYtYWRhOS00ZjY3LWFlMzAtMmFkZmU2NjExNzJiIiwiZXhwIjoxNzUxNzcyMzQ1LCJyb2xlcyI6InVzZXIifQ.vpX4p3jPI8-uWi0qKepwpAoIlBh03JuBWoZtTtWSg-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_pasien",
+									"value": "Danang",
+									"type": "text"
+								},
+								{
+									"key": "kabupaten",
+									"value": "Badung",
+									"type": "text"
+								},
+								{
+									"key": "rumah_sakit",
+									"value": "RSUD Kapal",
+									"type": "text"
+								},
+								{
+									"key": "golongan_darah",
+									"value": "O",
+									"type": "text"
+								},
+								{
+									"key": "rhesus",
+									"value": "-",
+									"type": "text"
+								},
+								{
+									"key": "jml_pendonor",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "nama_pemohon",
+									"value": "Dani",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "08134523456",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Belum Selesai",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_kebutuhan",
+									"value": "10/7/2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan/update/{id}",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan",
+								"update",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/v1/permohonan/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan/delete/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "berita",
+			"item": [
+				{
+					"name": "GET /api/v1/berita",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/v1/berita/{id}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/berita/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "judul_berita",
+									"value": "Kampanye Donor Darah",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi_berita",
+									"value": "Kampanye donor darah untuk membantu sesama",
+									"type": "text"
+								},
+								{
+									"key": "url_image",
+									"value": "https://example.com/image.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /api/v1/berita/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "judul_berita",
+									"value": "Kampanye Donor Darah Updated",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi_berita",
+									"value": "Kampanye donor darah untuk membantu sesama - Updated",
+									"type": "text"
+								},
+								{
+									"key": "url_image",
+									"value": "https://example.com/image_updated.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita/update/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "POST /api/v1/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testuser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/auth/login",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "newuser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "newuser@example.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/auth/register",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "protected",
+			"item": [
+				{
+					"name": "GET /api/v1/protected/data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/protected/data",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"protected",
+								"data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "komentar",
+			"item": [
+				{
+					"name": "GET /api/v1/komentar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/permohonan",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permohonan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/v1/komentar/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Alex",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Website ini sangat membantu",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/komentar/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"komentar",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/v1/komentar/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita/delete/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stok_darah",
+			"item": [
+				{
+					"name": "GET /api/v1/stok",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/berita",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"berita"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/stok/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wilayah",
+									"value": "Badung",
+									"type": "text"
+								},
+								{
+									"key": "jumlah_tersedia",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "kapasitas_total",
+									"value": "30000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/stok/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stok",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /api/v1/stok/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wilayah",
+									"value": "Badung",
+									"type": "text"
+								},
+								{
+									"key": "jumlah_tersedia",
+									"value": "4000",
+									"type": "text"
+								},
+								{
+									"key": "kapasitas_total",
+									"value": "30000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/stok/update/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stok",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/v1/stok/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/stok/delete/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stok",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "donor_respon",
+			"item": [
+				{
+					"name": "GET /api/v1/donor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/donor",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"donor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/v1/donor/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "permohonan_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Selesai",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_donor",
+									"value": "11/07/2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/donor/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"donor",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /api/v1/donor/update/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "Selesai",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/donor/update/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"donor",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/v1/donor/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/donor/delete/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"donor",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "flask_local",
+			"value": "http://localhost:5000"
+		},
+		{
+			"key": "jwt_token",
+			"value": "your_jwt_token_here"
+		}
+	]
+}
